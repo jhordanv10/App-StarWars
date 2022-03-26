@@ -1,35 +1,47 @@
 import { useState, useEffect } from 'react';
 import './ContainerFilms.scss';
 import CardFilms from '../../molecules/CardFilms';
+import Loading from '../../atoms/Loading';
 
 const ContainerFilms = () => {
 
   const [films, setFilms] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setLoading(true)
     fetch('https://swapi.dev/api/films/?format=json')
       .then(response => response.json())
       .then(json => {
         setFilms(json.results)
+        setLoading(false)
       })
   }, [])
 
-  return (
-    <section className='container_films'>
-      {films.map(film => {
-        return (
-          <CardFilms
-            key={film.episode_id}
-            id={film.episode_id}
-            title={film.title}
-            characters={film.characters}
-          />
-        )
-      }
-      )}
-    </section >
+  if (loading) {
+    return (
+      <Loading/>
+    )
+  } else {
+    return (
+      <section className='container_films'>
+        {films.map(film => {
+          return (
+            <CardFilms
+              key={film.episode_id}
+              id={film.episode_id}
+              title={film.title}
+              characters={film.characters}
+            />
+          )
+        }
+        )}
+      </section >
 
-  );
+    );
+  }
+
+
 };
 
 export default ContainerFilms;

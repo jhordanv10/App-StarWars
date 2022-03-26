@@ -1,30 +1,40 @@
 import { useState, useEffect } from 'react';
 import './ContainerVehicles.scss';
 import CardVehicles from '../../molecules/CardVehicles/CardVehicles';
+import Loading from '../../atoms/Loading';
 
 const ContainerVehicles = () => {
 
     const [vehicles, setVehicles] = useState([])
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        setLoading(true)
         fetch('https://swapi.dev/api/vehicles/?format=json')
             .then(response => response.json())
             .then(json => {
                 setVehicles(json.results)
-                console.log(json.results)
+                setLoading(false)
             })
     }, [])
 
-    return (
-        <section className='container_vehicles'>
-            {vehicles.map(vehicle =>
-                <CardVehicles
-                    name={vehicle.name}
-                    crew={vehicle.crew}
-                    vehicle_class={vehicle.vehicle_class}
-                />)}
-        </section >
-    );
+    if (loading) {
+        return (
+            <Loading/>
+        )
+    } else {
+        return (
+            <section className='container_vehicles'>
+                {vehicles.map(vehicle =>
+                    <CardVehicles
+                        key={vehicle.name}
+                        name={vehicle.name}
+                        crew={vehicle.crew}
+                        vehicle_class={vehicle.vehicle_class}
+                    />)}
+            </section >
+        );
+    }
 };
 
 export default ContainerVehicles;
