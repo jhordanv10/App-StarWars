@@ -1,0 +1,13 @@
+.films_page {
+    overflow-y: scroll;
+    .films_page-header {
+        background-color: #fff;
+                
+        .films_page-header-title {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px 0px;
+        }
+    }
+}

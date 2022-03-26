@@ -1,0 +1,22 @@
+.card_vehicles {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0px 5px;
+    border-radius: 15px;
+    padding: 15px;
+    max-height: 230px;
+    transition: all .4s ease-in-out;
+      &:hover {
+        transform: scale(1.08);
+      }
+    .card_vehicles-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #3880ff;
+    }
+    .card_vehicles-crew {
+        font-size: 15px;
+    }
+    .card_vehicles-class {
+        font-size: 13px;
+    }
+}
