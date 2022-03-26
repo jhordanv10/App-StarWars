@@ -8,7 +8,7 @@ const ContainerHome = () => {
     <>
       <section className='container_home'>
         <figure className='container_home-figure'>
-          <img className='container_home-figure-imgStarW' src={ImgHome}></img>
+          <img className='container_home-figure-imgStarW' src={ImgHome} alt="lightsaber" />
         </figure>
         <div className='container_home-description'>
           <h2 className='container_home-description-p'>¡Hello to StarWars-App!</h2>
