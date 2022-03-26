@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './ContainerStarShips.scss';
-import CardStarShips from '../../molecules/CardStarShips/CardStarShips';
+import CardStarShips from '../../molecules/CardStarShips';
 import Loading from '../../atoms/Loading';
 
 const ContainerStarShips = () => {

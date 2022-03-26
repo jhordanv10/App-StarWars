@@ -12,9 +12,9 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { carOutline, homeOutline, planetSharp, videocamOutline } from 'ionicons/icons';
 import Home from './pages/Home';
-import Films from './pages/Films/Films';
-import Starships from './pages/StarShips/StarShips';
-import Vehicles from './pages/Vehicles/Vehicles';
+import Films from './pages/Films';
+import Starships from './pages/StarShips/index.jsx';
+import Vehicles from './pages/Vehicles';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -37,7 +37,7 @@ import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC = () => (
+const App = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>

@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle } from '@ionic/react';
 import './StarShips.scss';
-import ContainerStarShips from '../../components/organisms/ContainerStarShips/ContainerStarShips';
+import ContainerStarShips from '../../components/organisms/ContainerStarShips';
 
 
 const StarShips = () => {

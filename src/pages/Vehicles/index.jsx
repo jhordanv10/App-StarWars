@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle } from '@ionic/react';
 import './Vehicles.scss';
-import ContainerVehicles from '../../components/organisms/ContainerVehicles/ContainerVehicles';
+import ContainerVehicles from '../../components/organisms/ContainerVehicles';
 
 
 const Vehicles = () => {

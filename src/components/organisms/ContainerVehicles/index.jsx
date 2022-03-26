@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './ContainerVehicles.scss';
-import CardVehicles from '../../molecules/CardVehicles/CardVehicles';
+import CardVehicles from '../../molecules/CardVehicles';
 import Loading from '../../atoms/Loading';
 
 const ContainerVehicles = () => {
