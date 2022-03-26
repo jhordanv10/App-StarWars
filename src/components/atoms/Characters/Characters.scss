@@ -1,8 +1,7 @@
-.character {
-    list-style: none;
-    padding: 0px;
-    margin: 8px;
-    .character-list {
+
+    
+.character-list {
+
         .character-list-button {
         margin: 10px 0px;
         text-decoration: none;
@@ -10,11 +9,10 @@
         font-size: 15px;
         background-color: transparent;
         cursor: pointer;
-        margin: 0px;
+        margin: 5px;
 
         &:hover {
             color: #000;
-        }
         }
     }
 }

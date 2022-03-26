@@ -5,3 +5,28 @@
     gap: 50px;
     padding: 30px;
 }
+.swal-modal {
+    margin: 0px;
+}
+.swal-overlay  {
+  backdrop-filter: blur(3px); 
+} 
+
+.swal-button {
+    background-color: #3880ff;
+    transition: all ease-in-out 500ms;
+}
+
+.swal-title {
+    color: #000;
+    font-weight: bold;
+    margin-top: 15px;
+    
+}
+.swal-text {
+    color: #000;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+    line-height: 22px;
+}
